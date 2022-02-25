@@ -46,7 +46,7 @@
 
 ##  E -R 图 
 
-![img](file:////private/var/folders/hg/l9m94kl50p70tn4rgwk7z_4h0000gn/T/com.kingsoft.wpsoffice.mac/wps-hmqhmq/ksohtml/wpsPhTwlw.jpg) 
+![e-r](./pic/e-r.png) 
 
 ## 角色 
 
@@ -60,9 +60,15 @@
 
 ## 1.1. 系统功能结构
 
- ![img](file:////private/var/folders/hg/l9m94kl50p70tn4rgwk7z_4h0000gn/T/com.kingsoft.wpsoffice.mac/wps-hmqhmq/ksohtml/wpsSEe5Dk.jpg)
+ ![function](./pic/function.png)
 
-**该平台系统由****注册登录****系统、试题选项系统和测试系统三部分构成。****注册登录****系统负责教师和学生的注册以及登录。试题选项系统提供试题的增删改和测试中学生选择选项的信息更新。测试系统负责教师创建和发布测试，学生根据教师发布的班级测试参与考试并提交，教师和学生查看各个测试的详情。**
+该平台系统由 注册登录系统、试题选项系统和测试系统三部分构成。
+
+注册登录系统负责教师和学生的注册以及登录。
+
+试题选项系统提供试题的增删改和测试中学生选择选项的信息更新。
+
+测试系统负责教师创建和发布测试，学生根据教师发布的班级测试参与考试并提交，教师和学生查看各个测试的详情。 
 
  
 
