@@ -1,0 +1,33 @@
+server:
+  port: 6011
+spring:
+  application:
+    name: examserver
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.106.117.190:3306/examination
+    username: root
+    password: foodie123
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
+#  rabbitmq:
+#    host: www.foodiesquad.top
+#    username: foodie
+#    password: foodie123
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://euk1.com:7001/eureka/
+mybatis:
+  mapper-locations: classpath:com/foodie/mapper/*.xml
+
+
+  #包含的服务，也可以exclude,服务中心就不上线
+  #management.endpoints.web.exposure.include=*
+
+  #可以远程关闭服务节点
+  #management.endpoint.shutdown.enabled=true
+
+  #可以上报服务的真实健康状态
+  #eureka.client.health
+

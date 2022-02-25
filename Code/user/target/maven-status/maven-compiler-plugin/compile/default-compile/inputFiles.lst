@@ -1,0 +1,10 @@
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/user/src/main/java/com/foodie/loginconsumer/LoginConsumerApplication.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/user/src/main/java/com/foodie/loginconsumer/feignclient/AuthService.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/user/src/main/java/com/foodie/loginconsumer/utils/CookieUtils.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/user/src/main/java/com/foodie/loginconsumer/feignclient/UserServiceFallBack.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/user/src/main/java/com/foodie/loginconsumer/controller/LoginController.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/user/src/main/java/com/foodie/loginconsumer/feignclient/AuthServiceFallBack.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/user/src/main/java/com/foodie/loginconsumer/controller/RegisterController.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/user/src/main/java/com/foodie/loginconsumer/utils/StringToDateConverter.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/user/src/main/java/com/foodie/loginconsumer/feignclient/UserService.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/user/src/main/java/com/foodie/loginconsumer/utils/ThymleafConfig.java

@@ -1,0 +1,12 @@
+com/foodie/examconsumer/exception/ItemProviderBackFactory.class
+com/foodie/examconsumer/config/CookieUtils.class
+com/foodie/examconsumer/exception/AuthServiceFallBack.class
+com/foodie/examconsumer/controller/StudentExamController.class
+com/foodie/examconsumer/feignapi/AuthService.class
+com/foodie/examconsumer/StudentApplication.class
+com/foodie/examconsumer/controller/savecookie.class
+com/foodie/examconsumer/config/ThymleafConfig.class
+com/foodie/examconsumer/exception/ExamFallBack.class
+com/foodie/examconsumer/feignapi/ItemProvider.class
+com/foodie/examconsumer/controller/StudentPageController.class
+com/foodie/examconsumer/feignapi/ExamController.class

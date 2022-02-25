@@ -1,0 +1,6 @@
+com/foodie/loginprovider/controller/LoginRegisterController.class
+com/foodie/loginprovider/service/RegisterServiceImpl.class
+com/foodie/loginprovider/LoginProviderApplication.class
+com/foodie/loginprovider/mapper/StudentMapper.class
+com/foodie/loginprovider/service/LoginServiceImpl.class
+com/foodie/loginprovider/mapper/TeacherMapper.class

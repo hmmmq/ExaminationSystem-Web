@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.foodie.examprovider.mapper.ExamCreateMapper">
+  <resultMap id="BaseResultMap" type="com.foodie.dto.ExamCreate">
+    <id column="examid" jdbcType="INTEGER" property="examId" />
+    <result column="teaid" jdbcType="INTEGER" property="teaId" />
+    <result column="createtime" jdbcType="VARCHAR" property="createTime" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="duration" jdbcType="INTEGER" property="duration" />
+    <result column="publishstate" jdbcType="BIT" property="publishState" />
+  </resultMap>
+
+  <select id="selectByTeaId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select examid, teaid,date_format(createtime,'%Y-%m-%d %H:%i:%S') as createtime, title, duration, publishstate
+    from exam
+    where teaid = #{teaid,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select examid, teaid, date_format(createtime,'%Y-%m-%d %H:%i:%S') as createtime, title, duration, publishstate
+    from exam
+    where examid = #{examid,jdbcType=INTEGER}
+  </select>
+
+  <update id="updateByPrimaryKey" parameterType="com.foodie.dto.ExamCreate">
+    update exam
+    set
+    title = #{title,jdbcType=VARCHAR},
+    duration = #{duration,jdbcType=INTEGER},
+    publishstate = #{publishState,jdbcType=BIT}
+    where examid = #{examId,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectPublishExamByBatchId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select exam.examid, teaid,date_format(createtime,'%Y-%m-%d %H:%i:%S') as createtime, title, duration, publishstate
+    from exam,publish
+    where publish.batchid = #{batchid,jdbcType=INTEGER} and exam.examid = publish.examid
+  </select>
+
+  <insert id="insert" parameterType="com.foodie.dto.ExamCreate">
+    insert into exam (examid, teaid, createtime,
+    title, duration, publishstate
+    )
+    values (#{examId,jdbcType=INTEGER}, #{teaId,jdbcType=INTEGER},CURDATE(),
+    #{title,jdbcType=VARCHAR}, #{duration,jdbcType=INTEGER}, 0
+    )
+  </insert>
+</mapper>

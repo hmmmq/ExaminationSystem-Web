@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+teacher home page.
+welcome!
+<label th:text="${teacher.teaid}"></label>
+<br>
+<label th:text="${teacher.name}"></label>
+<button><a th:href="@{/createexampage(teaid=${teacher.teaid})}">click here to create exam paper</a></button>
+</body>
+</html>

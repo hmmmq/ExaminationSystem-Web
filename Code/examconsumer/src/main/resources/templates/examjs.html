@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="/js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+<strong th:text="${itemexamStat.index}+1"></strong>	<strong th:text="${itemexam.type==1}?'. Single&nbsp;Choice':'.Multiple Choice'"></strong>
+<script>
+ $("#save").click(function() {
+ var examcreate = {
+	examId: $("#examId").text(),
+	teaId:  $("#teaId").text(),
+	title:  $("#title").val(),
+	duration: $("#duration").val(),
+	publishState:false
+	};
+  $.ajax({
+  type: "PUT",
+  url: "/mock/exam/save",
+  data: examcreate,
+  success: function(data){
+  if(data.status==401){
+  alert("测试为空或服务器错误，保存失败");
+  }else{
+  alert("保存成功!");
+  console.log(examcreate);
+
+  }
+  },
+  dataType: "json"
+});
+   });
+ </script>
+<script>
+ $("#publish").click(function(){
+
+  var publishReq={
+       "examId":$("#examId").text(),
+       "batchids":[1,2,3,4,5]};
+
+
+       $.ajax({
+       type:"PUT",
+       url:"/mock/exam/publish",
+       data: JSON.stringify(publishReq),
+       success: function(data){
+        if(data.status==401){
+                alert("测试为空或服务器错误，发布失败");
+                }else{
+                alert("发布成功!");
+                console.log(publishReq);
+                $("#teacherpage").trigger('click');
+                }},
+       dataType:"json",
+       contentType:"application/json" });
+
+
+
+
+
+ });
+
+</script>
+<script>
+									function change(itemexamstu){
+									$("#content").text(itemexamstu.itemExam.content);
+									$("#a").text(itemexamstu.itemExam.a);
+									$("#b").text(itemexamstu.itemExam.b);
+									$("#c").text(itemexamstu.itemExam.c);
+									$("#d").text(itemexamstu.itemExam.d);
+									// $("#point").text(itemexamstu.itemExam.point);
+									// $("#rightanswer").text(itemexamstu.itemExam.rightAnswer);
+									 }
+								</script>
+<script>
+ function start(min) {
+ var millionseconds=min*60000;
+    TimeDown("duration", millionseconds)
+  }
+  /*
+   时间倒计时
+   TimeDown.js
+   */
+  function TimeDown(id, value) {
+
+    //倒计时的总秒数
+    var totalSeconds = parseInt(value / 1000);
+
+    //取模（余数）
+    var modulo = totalSeconds % (60 * 60 * 24);
+    //小时数
+    var hours = Math.floor(modulo / (60 * 60));
+    modulo = modulo % (60 * 60);
+    //分钟
+    var minutes = Math.floor(modulo / 60);
+    //秒
+    var seconds = modulo % 60;
+
+    hours = hours.toString().length == 1 ? '0' + hours : hours;
+    minutes = minutes.toString().length == 1 ? '0' + minutes : minutes;
+    seconds = seconds.toString().length == 1 ? '0' + seconds : seconds;
+
+    //输出到页面
+    document.getElementById(id).innerHTML = hours + ":" + minutes + ":" + seconds;
+    //延迟一秒执行自己
+    if(hours == "00" && minutes == "00" && parseInt(seconds)-1<0){
+     alert("时间到！交卷！");
+    $('complete').trigger('click');
+    }else{
+      setTimeout(function () {
+        TimeDown(id, value-1000);
+      }, 1000)
+    }
+  }
+</script>
+<span hidden th:text="${itemexamstu.itemExam.content}"></span>
+<span hidden th:text="${itemexamstu.itemExam.a}"></span>
+<span hidden th:text="${itemexamstu.itemExam.b}"></span>
+<span hidden th:text="${itemexamstu.itemExam.c}"></span>
+<span hidden th:text="${itemexamstu.itemExam.d}"></span>
+<span hidden th:text="${itemexamstu.itemExam.point}"></span>
+<span hidden th:text="${itemexamstu.itemExam.rightAnswer}"></span>
+</body>
+</html>

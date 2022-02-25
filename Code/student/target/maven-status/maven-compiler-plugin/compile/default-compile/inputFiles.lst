@@ -1,0 +1,12 @@
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/student/src/main/java/com/foodie/examconsumer/controller/StudentExamController.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/student/src/main/java/com/foodie/examconsumer/exception/ExamFallBack.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/student/src/main/java/com/foodie/examconsumer/feignapi/AuthService.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/student/src/main/java/com/foodie/examconsumer/StudentApplication.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/student/src/main/java/com/foodie/examconsumer/config/ThymleafConfig.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/student/src/main/java/com/foodie/examconsumer/feignapi/ItemProvider.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/student/src/main/java/com/foodie/examconsumer/exception/ItemProviderBackFactory.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/student/src/main/java/com/foodie/examconsumer/config/CookieUtils.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/student/src/main/java/com/foodie/examconsumer/controller/savecookie.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/student/src/main/java/com/foodie/examconsumer/exception/AuthServiceFallBack.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/student/src/main/java/com/foodie/examconsumer/controller/StudentPageController.java
+/Users/hmqhmq/Public/作业/springcloud/考试系统项目/代码/student/src/main/java/com/foodie/examconsumer/feignapi/ExamController.java
